@@ -5,7 +5,10 @@ export default StyleSheet.create({
     height: Dimensions.get('window').width / 2,
     resizeMode: 'contain',
   },
-
+  teaserImage: {
+    width: '100%',
+    height: Dimensions.get('window').width / 2,
+  },
   smallTeaserImage: {
     width: Dimensions.get('window').width / 5,
     height: Dimensions.get('window').width / 5,

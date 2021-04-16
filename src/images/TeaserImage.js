@@ -8,7 +8,7 @@ const TeaserImage = ({source}) => {
   return (
     <Image
       source={source ? source : Teams}
-      style={Styles.ImageStyles.smallTeaserImage}
+      style={Styles.ImageStyles.teaserImage}
     />
   );
 };

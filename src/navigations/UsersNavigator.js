@@ -4,11 +4,13 @@ import HomeStack from 'LigaDataTask/src/navigations/HomeStack';
 import BottomTab from 'LigaDataTask/src/layout/BottomTab';
 import Search from 'LigaDataTask/src/screens/search/index';
 import PlayersStack from './PlayersStack';
+import GamesStack from './GamesStack';
+
 const Tab = createBottomTabNavigator();
 
 const UsersNavigator = () => {
   return (
-    <Tab.Navigator tabBar={(props) => <BottomTab {...props} />}>
+    <Tab.Navigator tabBar={props => <BottomTab {...props} />}>
       <Tab.Screen
         name="Teams"
         component={HomeStack}
@@ -23,7 +25,15 @@ const UsersNavigator = () => {
           tabBarIcon: require('LigaDataTask/assets/icons/players.png'),
         }}
       />
-    
+
+      <Tab.Screen
+        name="Games"
+        component={GamesStack}
+        options={{
+          tabBarIcon: require('LigaDataTask/assets/icons/flaming_football.png'),
+        }}
+      />
+
       <Tab.Screen
         name="Search"
         component={Search}

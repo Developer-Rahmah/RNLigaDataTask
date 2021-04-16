@@ -29,6 +29,12 @@ export default StyleSheet.create({
   verticalPadding: {
     paddingVertical: Dimensions.get('window').height / 17,
   },
+  mediumVerticalPadding: {
+    paddingVertical: Dimensions.get('window').height / 35,
+  },
+  smallVerticalPadding: {
+    paddingVertical: Dimensions.get('window').height / 80,
+  },
 
   paddingBottom: {
     paddingBottom: Dimensions.get('window').height / 7.5,
