@@ -28,12 +28,12 @@ const TeamCard = ({item, dataLength, index}) => {
               : styles.Layout.fullWidth,
           ]}>
           <View style={styles.Layout.bottomSpace}>
-            <IconImage source={Teams} color={Colors.LIGHT_PINK} />
+            <IconImage source={Teams} color={Colors.LIGHT_GREEN} />
           </View>
           <Title
             numberOfLines={1}
             title={item.full_name}
-            color={Colors.WHITE}
+            color={Colors.BLACK}
           />
         </Card>
       </View>

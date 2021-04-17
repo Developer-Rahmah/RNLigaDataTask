@@ -30,7 +30,7 @@ const index = ({route}) => {
         {data != undefined ? (
           <GameDetails item={data} index={index} cover={route.params.cover} />
         ) : (
-          <ActivityIndicator size="large" color={Colors.WHITE} />
+          <ActivityIndicator size="large" color={Colors.BLACK} />
         )}
       </View>
     </>

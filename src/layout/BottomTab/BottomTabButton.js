@@ -13,12 +13,13 @@ const BottomTabButton = ({icon, focused, label, ...rest}) => {
     <TouchableOpacity
       style={[
         styles.Elements.bottomTabButtonContainer,
-        {borderTopColor: focused ? Colors.LIGHT_PINK : Colors.LIGHT_GRAY},
+        {borderTopColor: focused ? Colors.LIGHT_GREEN : Colors.LIGHT_GRAY},
       ]}
       {...rest}>
       <IconImage
+      mediumIcon
         source={icon}
-        color={focused ? Colors.LIGHT_PINK : Colors.GRAY}
+        color={focused ? Colors.LIGHT_GREEN : Colors.GRAY}
       />
     </TouchableOpacity>
   );

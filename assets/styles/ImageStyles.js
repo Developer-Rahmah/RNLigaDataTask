@@ -25,4 +25,8 @@ export default StyleSheet.create({
     width: Dimensions.get('window').width / 17,
     height: Dimensions.get('window').width / 17,
   },
+  mediumIcon: {
+    width: Dimensions.get('window').width / 15,
+    height: Dimensions.get('window').width / 15,
+  },
 });

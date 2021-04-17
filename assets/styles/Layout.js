@@ -42,7 +42,7 @@ export default StyleSheet.create({
     width: '100%',
     height: Dimensions.get('window').height / 9,
     padding: 15,
-    backgroundColor: Colors.LIGHT_PINK,
+    backgroundColor: Colors.LIGHT_BLUE,
     alignItems: 'center',
     flexDirection: 'row',
   },
@@ -69,6 +69,7 @@ export default StyleSheet.create({
 
   headerIcon: {
     width: '10%',
+    tintColor: Colors.LIGHT_GREEN,
   },
   displayNone: {
     display: 'none',

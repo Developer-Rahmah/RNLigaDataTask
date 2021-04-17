@@ -12,7 +12,7 @@ const EmptyListMessage = ({}) => {
         styles.Elements.noItemsMessageContainer,
         styles.Layout.fullWidth,
       ]}>
-      <Title color={Colors.WHITE} title="There are no items" />
+      <Title color={Colors.BLACK} title="There are no items" />
     </View>
   );
 };

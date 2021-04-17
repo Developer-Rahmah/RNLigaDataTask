@@ -22,8 +22,8 @@ const GameDetails = ({item, cover}) => {
                 styles.General.justifyContentCenter,
               ]}>
               <Card>
-                <Title bold color={Colors.WHITE} title={'Home team:'} />
-                <Title color={Colors.WHITE} title={item.home_team.name} />
+                <Title bold color={Colors.BLACK} title={'Home team:'} />
+                <Title color={Colors.BLACK} title={item.home_team.name} />
               </Card>
               <Details
                 title="team Name"
@@ -38,8 +38,8 @@ const GameDetails = ({item, cover}) => {
               <Details title="Status" description={item.status} />
               <Details title="Season" description={item.season} />
               <Card style={styles.General.paddingTop}>
-                <Title bold color={Colors.WHITE} title={'Visitor team:'} />
-                <Title color={Colors.WHITE} title={item.visitor_team.name} />
+                <Title bold color={Colors.BLACK} title={'Visitor team:'} />
+                <Title color={Colors.BLACK} title={item.visitor_team.name} />
               </Card>
               <Details
                 title="Team name"
@@ -64,7 +64,7 @@ const GameDetails = ({item, cover}) => {
               styles.General.transparentBackground,
               styles.Layout.flexCenter,
             ]}>
-            <ActivityIndicator size="large" color={Colors.WHITE} />
+            <ActivityIndicator size="large" color={Colors.BLACK} />
           </Container>
         )}
       </ScrollView>

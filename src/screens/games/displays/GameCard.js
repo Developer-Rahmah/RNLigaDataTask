@@ -23,12 +23,12 @@ const GameCard = ({item}) => {
           onPress={() => navigation.navigate('GameDetails', {item: item,cover:selectedPhoto})}
           radius
           style={[styles.General.purpleBackground, styles.Layout.flexCenter]}>
-          <TeaserImage source={selectedPhoto} color={Colors.LIGHT_PINK} />
+          <TeaserImage source={selectedPhoto} color={Colors.LIGHT_GREEN} />
           <View style={styles.General.mediumVerticalPadding}>
             <Title
               numberOfLines={1}
               title={item.home_team.name}
-              color={Colors.WHITE}
+              color={Colors.BLACK}
             />
           </View>
         </TouchableOpacity>

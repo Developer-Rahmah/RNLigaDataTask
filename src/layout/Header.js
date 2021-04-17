@@ -29,7 +29,7 @@ const Header = ({title = 'HAPPI', showBack = false}) => {
         onPress={() => {
           navigation.goBack();
         }}>
-        <IconImage source={backIcon} />
+        <IconImage source={backIcon} color={Colors.LIGHT_GREEN} />
       </TouchableOpacity>
 
       {/* screen title */}
@@ -41,7 +41,7 @@ const Header = ({title = 'HAPPI', showBack = false}) => {
             ? styles.Elements.headerTitleContainerInAuthCase
             : styles.Layout.fullWidth,
         ]}>
-        <Title title={title} bold color={Colors.WHITE} />
+        <Title title={title} bold color={Colors.BLACK} />
       </View>
     </View>
   );

@@ -32,7 +32,7 @@ const PlayerDetails = ({item}) => {
               styles.General.transparentBackground,
               styles.Layout.flexCenter,
             ]}>
-            <ActivityIndicator size="large" color={Colors.WHITE} />
+            <ActivityIndicator size="large" color={Colors.BLACK} />
           </Container>
         )}
       </ScrollView>

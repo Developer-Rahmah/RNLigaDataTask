@@ -15,13 +15,7 @@ import styles from 'LigaDataTask/assets/styles';
 
 const index = ({navigation: {}}) => {
   const [selectedItems, setSelectedItems] = useState([]);
-  const {
-    data,
-    loading,
-    loadMore,
-    loadingMore,
-    setSelectedSeasons,
-  } = useGet({
+  const {data, loading, loadMore, loadingMore, setSelectedSeasons} = useGet({
     uri: GET.GAMES,
     hasPagination: true,
     getData: res => res.data.data,
@@ -48,6 +42,15 @@ const index = ({navigation: {}}) => {
         <Container>
           <ScrollView style={styles.General.horizontalPadding}>
             <MultiSelect
+              styleMainWrapper={styles.General.shadow}
+              styleListContainer={styles.General.darkPurpleBackground}
+              styleDropdownMenuSubsection={[
+                styles.General.transparentBackground,
+                styles.General.shadow,
+                styles.Elements.dropDownMenuBorder
+              ]}
+              searchInputStyle={{margin: 20}}
+              search
               hideDropdown
               hideTags
               onToggleList={() => onsubmit()}
@@ -61,8 +64,8 @@ const index = ({navigation: {}}) => {
               selectedItemTextColor={Colors.GRAY}
               selectedItemIconColor={Colors.GRAY}
               displayKey="name"
-              searchInputStyle={{color: Colors.GRAY}}
-              submitButtonColor={Colors.LIGHT_PINK}
+              searchInputStyle={[styles.Elements.summary, styles.Layout.margin]}
+              submitButtonColor={Colors.LIGHT_BLUE}
               submitButtonText="Filter"
             />
           </ScrollView>

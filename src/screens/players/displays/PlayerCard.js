@@ -26,12 +26,16 @@ const PlayerCard = ({item}) => {
             styles.Layout.flexDirectionRow,
           ]}>
           <View style={styles.General.horizontalPadding}>
-            <TeaserImage smallImg source={Player} />
+            <TeaserImage
+              smallImg
+              source={Player}
+              style={{tintColor: Colors.LIGHT_GREEN}}
+            />
           </View>
           <Title
             style={styles.Elements.playerName}
             title={item.first_name + ' ' + item.last_name}
-            color={Colors.WHITE}
+            color={Colors.BLACK}
           />
         </Card>
       </View>

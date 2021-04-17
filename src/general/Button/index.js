@@ -4,7 +4,7 @@ import Title from 'LigaDataTask/src/elements/Title';
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
 
-const Button = ({label, onPress, color = Colors.WHITE, style}) => {
+const Button = ({label, onPress, color = Colors.BLACK, style}) => {
   return (
     <TouchableOpacity
       style={[styles.Elements.primaryButton, style]}

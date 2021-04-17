@@ -5,7 +5,7 @@ import Colors from 'LigaDataTask/assets/styles/Colors';
 const LoadingMore = ({loading}) => {
   return (
     <View>
-      {loading ? <ActivityIndicator size="large" color={Colors.WHITE} /> : null}
+      {loading ? <ActivityIndicator size="large" color={Colors.BLACK} /> : null}
     </View>
   );
 };

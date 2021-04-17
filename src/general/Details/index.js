@@ -17,11 +17,11 @@ const Details = ({title, description}) => {
         ]}>
         <View
           style={[styles.Layout.widthHalf, styles.Layout.alignItemsFlexStart]}>
-          <Title color={Colors.WHITE} title={title} />
+          <Title color={Colors.BLACK} title={title} />
         </View>
         <View
           style={[styles.Layout.widthHalf, styles.Layout.alignItemsFlexEnd]}>
-          <Summary color={Colors.WHITE} description={description} />
+          <Summary color={Colors.BLACK} description={description} />
         </View>
       </View>
       <View style={styles.Elements.lightSeparator} />

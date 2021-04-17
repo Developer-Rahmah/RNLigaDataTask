@@ -4,15 +4,16 @@ import Styles from 'LigaDataTask/assets/styles';
 import {htmlDecode} from 'LigaDataTask/services/helper';
 import Teams from 'LigaDataTask/assets/icons/teams.png';
 
-const TeaserImage = ({source, smallImg=false}) => {
+const TeaserImage = ({source, smallImg = false, color = null, style = {}}) => {
   return (
     <Image
       source={source ? source : Teams}
-      style={
+      style={[
         smallImg
           ? Styles.ImageStyles.smallTeaserImage
-          : Styles.ImageStyles.teaserImage
-      }
+          : Styles.ImageStyles.teaserImage,
+        style,
+      ]}
     />
   );
 };

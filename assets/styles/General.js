@@ -16,14 +16,14 @@ export default StyleSheet.create({
   },
 
   purpleBackground: {
-    backgroundColor: Colors.PURPLE,
+    backgroundColor: Colors.GREEN,
   },
 
   transparentBackground: {
     backgroundColor: 'transparent',
   },
   darkPurpleBackground: {
-    backgroundColor: Colors.DARK_PURPLE,
+    backgroundColor: Colors.LIGHT_YELLOW,
   },
 
   horizontalPadding: {

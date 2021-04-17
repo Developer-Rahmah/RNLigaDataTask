@@ -21,7 +21,7 @@ export default StyleSheet.create({
     borderRadius: Dimensions.get('window').width / 7,
     borderColor: Colors.GRAY,
     borderWidth: 1,
-    backgroundColor: Colors.WHITE,
+    backgroundColor: Colors.LIGHT_YELLOW,
   },
   inputContainer: {
     width: '90%',
@@ -33,7 +33,7 @@ export default StyleSheet.create({
   },
 
   primaryButton: {
-    backgroundColor: Colors.PURPLE,
+    backgroundColor: Colors.GREEN,
     padding: 7,
     borderRadius: 7,
     justifyContent: 'center',
@@ -43,7 +43,7 @@ export default StyleSheet.create({
   bottomTabContainer: {
     bottom: 0,
     flexDirection: 'row',
-    backgroundColor: Colors.WHITE,
+    backgroundColor: Colors.LIGHT_BLUE,
     borderTopColor: Colors.LIGHT_GRAY,
     borderTopWidth: 0.9,
   },
@@ -61,7 +61,7 @@ export default StyleSheet.create({
     height: 1,
     opacity: 0.5,
     marginVertical: 3,
-    backgroundColor: Colors.WHITE,
+    backgroundColor: Colors.BLACK,
   },
 
   noItemsMessageContainer: {
@@ -85,5 +85,10 @@ export default StyleSheet.create({
   },
   headerTitleContainerInShowBackCase: {
     width: '80%',
+  },
+  dropDownMenuBorder: {
+    borderColor: Colors.GRAY,
+    borderWidth: 1,
+    borderRadius: 20,
   },
 });

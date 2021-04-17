@@ -27,7 +27,7 @@ const index = ({route}) => {
         {data != undefined ? (
           <TeamDetails item={data} index={index} />
         ) : (
-          <ActivityIndicator size="large" color={Colors.WHITE} />
+          <ActivityIndicator size="large" color={Colors.BLACK} />
         )}
       </View>
     </>
