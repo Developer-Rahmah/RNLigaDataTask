@@ -39,7 +39,9 @@ export default StyleSheet.create({
   paddingBottom: {
     paddingBottom: Dimensions.get('window').height / 7.5,
   },
-
+  paddingTop: {
+    paddingTop: Dimensions.get('window').height / 15,
+  },
   shadow: {
     elevation: 1.5,
     shadowColor: Colors.BLACK,

@@ -26,7 +26,7 @@ const PlayerCard = ({item}) => {
             styles.Layout.flexDirectionRow,
           ]}>
           <View style={styles.General.horizontalPadding}>
-            <TeaserImage source={Player} />
+            <TeaserImage smallImg source={Player} />
           </View>
           <Title
             style={styles.Elements.playerName}

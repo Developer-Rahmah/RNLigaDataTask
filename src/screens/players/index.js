@@ -1,24 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from 'LigaDataTask/src/layout/Header';
 import Rows from 'LigaDataTask/src/general/Rows';
 import styles from 'LigaDataTask/assets/styles';
-import {View} from 'react-native';
+import {Keyboard, TextInput, TouchableOpacity, View} from 'react-native';
 import {GET} from 'LigaDataTask/services/config/api';
 import PlayerCard from 'LigaDataTask/src/screens/players/displays/PlayerCard';
 import {useGet} from 'LigaDataTask/services/hooks';
 import StatusBlock from 'LigaDataTask/src/general/StatusBlock';
+import IconImage from 'LigaDataTask/src/images/IconImage';
+import Search from 'LigaDataTask/assets/icons/search.png';
+import Colors from 'LigaDataTask/assets/styles/Colors';
 
 const index = ({navigation: {}}) => {
-  const {data, status, loading, loadMore, loadingMore} = useGet({
+  const [query, setQuery] = useState('');
+
+  const {
+    data,
+    status,
+    loading,
+    loadMore,
+    loadingMore,
+    setPage,
+    setData,
+    setSearchQuery,
+    fetch,
+  } = useGet({
     uri: GET.PLAYERS,
     hasPagination: true,
     getData: res => res.data.data,
     getPagination: res => res.data.pagination,
   });
+  const OnSearch = () => {
+    // setData([]);
+    // setPage(1),
+    setSearchQuery(query);
 
+    fetch();
+  };
   return (
     <>
       <Header title="Players" />
+
       <StatusBlock status={status} loading={loading}>
         <View
           style={[
@@ -28,6 +50,32 @@ const index = ({navigation: {}}) => {
             styles.General.paddingBottom,
             styles.General.justifyContentCenter,
           ]}>
+          <View
+            style={[
+              styles.Elements.searchInputContainer,
+              styles.General.shadow,
+              styles.Layout.margin,
+              styles.Layout.flexDirectionRow,
+              styles.General.alignItemsCenter,
+            ]}>
+            <View style={styles.Elements.inputContainer}>
+              <TextInput
+                value={query}
+                style={styles.Elements.input}
+                inlineImageLeft="search_icon"
+                onChangeText={text => {
+                  setQuery(text);
+                }}
+              />
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                Keyboard.dismiss(), OnSearch();
+              }}>
+              <IconImage source={Search} />
+            </TouchableOpacity>
+          </View>
+
           <Rows
             onEndReached={loadMore}
             loading={loadingMore}

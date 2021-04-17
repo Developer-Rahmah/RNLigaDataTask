@@ -25,6 +25,9 @@ export default StyleSheet.create({
   cardPadding: {
     padding: 20,
   },
+  margin: {
+    margin: 20,
+  },
   smallCardPadding: {
     padding: 7,
   },

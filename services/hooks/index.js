@@ -34,6 +34,7 @@ export const useRequest = ({
   const [loadingMore, setLoadingMore] = useState(false);
   const [pagination, setPagination] = useState({});
   const [page, setPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
 
   /**
    *
@@ -50,7 +51,7 @@ export const useRequest = ({
 
       if (method == 'GET') {
         const res = await client.request({
-          url: buildUrl(uri + '?page=' + page),
+          url: buildUrl(uri + '?page=' + page + '&search=' + searchQuery),
           method,
         });
 
@@ -102,7 +103,7 @@ export const useRequest = ({
     if (automatic) {
       doFetchData();
     }
-  }, [buildUrl(uri, query, params), automatic]);
+  }, [buildUrl(uri, query, params), automatic, searchQuery]);
 
   const loadMore = async () => {
     // On loadMore if there are more pages.
@@ -125,9 +126,9 @@ export const useRequest = ({
       }
     }
   };
-
   return {
     data,
+    setData,
     loading,
     status,
     loadMore,
@@ -135,6 +136,7 @@ export const useRequest = ({
     pagination,
     page,
     setPage,
+    setSearchQuery,
     fetch: doFetchData,
   };
 };

@@ -15,7 +15,10 @@ const index = ({route}) => {
   });
   return (
     <>
-      <Header title={data.name != undefined ? data.name : ''} showBack />
+      <Header
+        title={data.home_team != undefined ? data.home_team.name : ''}
+        showBack
+      />
       <View
         style={[
           styles.General.fullScreen,
@@ -25,7 +28,7 @@ const index = ({route}) => {
           styles.General.justifyContentCenter,
         ]}>
         {data != undefined ? (
-          <GameDetails item={data} index={index} />
+          <GameDetails item={data} index={index} cover={route.params.cover} />
         ) : (
           <ActivityIndicator size="large" color={Colors.WHITE} />
         )}
