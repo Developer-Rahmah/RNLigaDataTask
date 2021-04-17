@@ -1,4 +1,4 @@
-export const setIsAuthAction = (isAuth = false) => ({
-  type: 'SET_IS_AUTH',
-  payload: isAuth,
+export const setShowGifImageAction = (showGifImage ) => ({
+  type: 'SET_SHOW_GIF_ICON',
+  payload: showGifImage,
 });
