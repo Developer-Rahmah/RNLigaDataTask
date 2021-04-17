@@ -35,6 +35,7 @@ export const useRequest = ({
   const [pagination, setPagination] = useState({});
   const [page, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSeasons, setSelectedSeasons] = useState(null);
 
   /**
    *
@@ -50,10 +51,17 @@ export const useRequest = ({
       }
 
       if (method == 'GET') {
-        const res = await client.request({
-          url: buildUrl(uri + '?page=' + page + '&search=' + searchQuery),
-          method,
-        });
+        const res =
+          selectedSeasons != null
+            ? await client.request({
+                url: buildUrl(uri + '?page=' + page + '&' + selectedSeasons),
+
+                method,
+              })
+            : await client.request({
+                url: buildUrl(uri + '?page=' + page + '&search=' + searchQuery),
+                method,
+              });
 
         setStatus(200);
         return res;
@@ -103,7 +111,7 @@ export const useRequest = ({
     if (automatic) {
       doFetchData();
     }
-  }, [buildUrl(uri, query, params), automatic, searchQuery]);
+  }, [buildUrl(uri, query, params), automatic, searchQuery, selectedSeasons]);
 
   const loadMore = async () => {
     // On loadMore if there are more pages.
@@ -118,7 +126,6 @@ export const useRequest = ({
           setData(prev => [...prev, ...data]);
           setPagination(res.data.meta);
           setLoadingMore(false);
-          // setPage(page + 1);
         } catch (e) {
           setLoadingMore(false);
           console.error(e);
@@ -137,6 +144,7 @@ export const useRequest = ({
     page,
     setPage,
     setSearchQuery,
+    setSelectedSeasons,
     fetch: doFetchData,
   };
 };
