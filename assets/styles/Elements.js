@@ -52,7 +52,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 12,
+    padding: 20,
     borderTopWidth: 0,
   },
 
@@ -81,7 +81,7 @@ export default StyleSheet.create({
     paddingTop: Dimensions.get('window').height / 47,
   },
   headerTitleContainerInAuthCase: {
-    width: '90%',
+    width: '100%',
   },
   headerTitleContainerInShowBackCase: {
     width: '80%',

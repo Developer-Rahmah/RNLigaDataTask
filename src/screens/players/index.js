@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from 'LigaDataTask/src/layout/Header';
 import Rows from 'LigaDataTask/src/general/Rows';
 import styles from 'LigaDataTask/assets/styles';
@@ -9,7 +9,7 @@ import {useGet} from 'LigaDataTask/services/hooks';
 import StatusBlock from 'LigaDataTask/src/general/StatusBlock';
 import IconImage from 'LigaDataTask/src/images/IconImage';
 import Search from 'LigaDataTask/assets/icons/search.png';
-import Colors from 'LigaDataTask/assets/styles/Colors';
+import Container from 'LigaDataTask/src/general/Container';
 
 const index = ({navigation: {}}) => {
   const [query, setQuery] = useState('');
@@ -20,36 +20,29 @@ const index = ({navigation: {}}) => {
     loading,
     loadMore,
     loadingMore,
-    setPage,
-    setData,
+    searchQuery,
     setSearchQuery,
     fetch,
   } = useGet({
     uri: GET.PLAYERS,
     hasPagination: true,
     getData: res => res.data.data,
-    getPagination: res => res.data.pagination,
   });
   const OnSearch = () => {
-    // setData([]);
-    // setPage(1),
     setSearchQuery(query);
 
     fetch();
   };
+  useEffect(() => {
+    
+    
+  }, [searchQuery])
   return (
     <>
       <Header title="Players" />
 
       <StatusBlock status={status} loading={loading}>
-        <View
-          style={[
-            styles.General.fullScreen,
-            styles.General.largePadding,
-            styles.General.darkPurpleBackground,
-            styles.General.paddingBottom,
-            styles.General.justifyContentCenter,
-          ]}>
+        <Container>
           <View
             style={[
               styles.Elements.searchInputContainer,
@@ -85,7 +78,7 @@ const index = ({navigation: {}}) => {
               <PlayerCard item={item} index={index} dataLength={data.length} />
             )}
           />
-        </View>
+        </Container>
       </StatusBlock>
     </>
   );

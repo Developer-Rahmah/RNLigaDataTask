@@ -18,6 +18,10 @@ export default StyleSheet.create({
   purpleBackground: {
     backgroundColor: Colors.PURPLE,
   },
+
+  transparentBackground: {
+    backgroundColor: 'transparent',
+  },
   darkPurpleBackground: {
     backgroundColor: Colors.DARK_PURPLE,
   },

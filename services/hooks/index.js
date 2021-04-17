@@ -143,6 +143,7 @@ export const useRequest = ({
     pagination,
     page,
     setPage,
+    searchQuery,
     setSearchQuery,
     setSelectedSeasons,
     fetch: doFetchData,

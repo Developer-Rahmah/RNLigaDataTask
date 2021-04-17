@@ -6,6 +6,7 @@ import DetailsImage from 'LigaDataTask/src/images/DetailsImage';
 import Details from 'LigaDataTask/src/general/Details';
 import {ScrollView} from 'react-native-gesture-handler';
 import FootballPlayer from 'LigaDataTask/assets/images/football_player.png';
+import {Container} from 'native-base';
 
 const PlayerDetails = ({item}) => {
   return (
@@ -26,7 +27,13 @@ const PlayerDetails = ({item}) => {
             </View>
           </>
         ) : (
-          <ActivityIndicator size="large" color={Colors.WHITE} />
+          <Container
+            style={[
+              styles.General.transparentBackground,
+              styles.Layout.flexCenter,
+            ]}>
+            <ActivityIndicator size="large" color={Colors.WHITE} />
+          </Container>
         )}
       </ScrollView>
     </>

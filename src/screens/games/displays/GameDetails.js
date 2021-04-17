@@ -1,13 +1,13 @@
 import React from 'react';
-import {View} from 'react-native';
+import {ActivityIndicator, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import styles from 'LigaDataTask/assets/styles';
 import Details from 'LigaDataTask/src/general/Details';
 import DetailsImage from 'LigaDataTask/src/images/DetailsImage';
-import FootballTeams from 'LigaDataTask/assets/images/football_teams.png';
 import Title from 'LigaDataTask/src/elements/Title';
 import Card from 'LigaDataTask/src/general/Card';
 import Colors from 'LigaDataTask/assets/styles/Colors';
+import Container from 'LigaDataTask/src/general/Container';
 
 const GameDetails = ({item, cover}) => {
   return (
@@ -37,7 +37,6 @@ const GameDetails = ({item, cover}) => {
               <Details title="Team score" description={item.home_team_score} />
               <Details title="Status" description={item.status} />
               <Details title="Season" description={item.season} />
-
               <Card style={styles.General.paddingTop}>
                 <Title bold color={Colors.WHITE} title={'Visitor team:'} />
                 <Title color={Colors.WHITE} title={item.visitor_team.name} />
@@ -59,7 +58,15 @@ const GameDetails = ({item, cover}) => {
               <Details title="Season" description={item.season} />
             </View>
           </>
-        ) : null}
+        ) : (
+          <Container
+            style={[
+              styles.General.transparentBackground,
+              styles.Layout.flexCenter,
+            ]}>
+            <ActivityIndicator size="large" color={Colors.WHITE} />
+          </Container>
+        )}
       </ScrollView>
     </>
   );

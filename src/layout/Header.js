@@ -1,10 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
 import style from 'LigaDataTask/assets/styles';
 import {useNavigation} from '@react-navigation/native';
 import backIcon from 'LigaDataTask/assets/icons/arrow_back.png';
-import logoutIcon from 'LigaDataTask/assets/icons/logout.png';
-import {useSelector, useDispatch} from 'react-redux';
 import Colors from 'LigaDataTask/assets/styles/Colors';
 import IconImage from 'LigaDataTask/src/images/IconImage';
 import Title from 'LigaDataTask/src/elements/Title';
@@ -13,8 +11,7 @@ import styles from 'LigaDataTask/assets/styles';
 
 const Header = ({title = 'HAPPI', showBack = false}) => {
   const navigation = useNavigation();
-  
- 
+
   return (
     <View
       style={[
@@ -46,17 +43,6 @@ const Header = ({title = 'HAPPI', showBack = false}) => {
         ]}>
         <Title title={title} bold color={Colors.WHITE} />
       </View>
-
-      {/* logout button */}
-      <TouchableOpacity
-        style={[
-          styles.Layout.headerIcon,
-        ]}
-        onPress={() => {
-         
-        }}>
-        <IconImage source={logoutIcon} />
-      </TouchableOpacity>
     </View>
   );
 };
