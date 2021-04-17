@@ -32,7 +32,7 @@ const index = ({navigation: {}}) => {
     setSelectedItems(selectedItems);
   };
   onsubmit = () => {
-    if (selectedItems.length > 0) {
+    // if (selectedItems.length > 0) {
       var seasonsArr = [];
 
       for (let i = 0; i <= selectedItems.length; i++) {
@@ -44,7 +44,7 @@ const index = ({navigation: {}}) => {
 
         let finalArr = seasonStrArr.split(',').join('&');
         setSelectedSeasons(finalArr);
-      }
+      
     }
   };
   return (
