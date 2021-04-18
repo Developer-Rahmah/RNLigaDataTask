@@ -17,7 +17,7 @@ const StatusBlock = ({loading, children, noIndicator}) => {
   if (isLoadingArray || isLoadingBoolean) {
     return noIndicator ? null : (
       <Container style={[style.General.fullScreen]}>
-        <ActivityIndicator color={colors.darkGray} size="large" />
+        <ActivityIndicator color={colors.BLACK} size="large" />
       </Container>
     );
   } else {
