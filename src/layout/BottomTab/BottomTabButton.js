@@ -17,7 +17,7 @@ const BottomTabButton = ({icon, focused, label, ...rest}) => {
       ]}
       {...rest}>
       <IconImage
-      mediumIcon
+        mediumIcon
         source={icon}
         color={focused ? Colors.LIGHT_GREEN : Colors.GRAY}
       />

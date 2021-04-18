@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import Colors from './Colors';
+import Colors from 'LigaDataTask/assets/styles/Colors';
 
 export default StyleSheet.create({
   card: {
@@ -45,12 +45,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.LIGHT_BLUE,
     alignItems: 'center',
     flexDirection: 'row',
-  },
-
-  logo: {
-    width: 180,
-    resizeMode: 'contain',
-    height: 80,
   },
 
   flexDirectionRow: {

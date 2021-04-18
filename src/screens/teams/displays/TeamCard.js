@@ -19,7 +19,7 @@ const TeamCard = ({item, dataLength, index}) => {
           radius
           style={[
             styles.General.shadow,
-            styles.General.purpleBackground,
+            styles.General.greenBackground,
             styles.Layout.flexCenter,
             styles.General.verticalPadding,
             styles.General.horizontalPadding,

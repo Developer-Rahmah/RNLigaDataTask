@@ -33,10 +33,7 @@ const index = ({navigation: {}}) => {
 
     fetch();
   };
-  useEffect(() => {
-    
-    
-  }, [searchQuery])
+  useEffect(() => {}, [searchQuery]);
   return (
     <>
       <Header title="Players" />

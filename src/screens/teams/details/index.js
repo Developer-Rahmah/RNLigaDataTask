@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from 'LigaDataTask/src/layout/Header';
 import styles from 'LigaDataTask/assets/styles';
-import {ActivityIndicator, View} from 'react-native';
-import Colors from 'LigaDataTask/assets/styles/Colors';
+import {View} from 'react-native';
 import {useGet} from 'LigaDataTask/services/hooks';
 import {GET} from 'LigaDataTask/services/config/api';
-import TeamDetails from '../displays/TeamDetails';
+import TeamDetails from 'LigaDataTask/src/screens/teams/displays/TeamDetails';
+import Loader from 'LigaDataTask/src/general/Loader';
 
 const index = ({route}) => {
   const {data, status, loading} = useGet({
@@ -20,14 +20,14 @@ const index = ({route}) => {
         style={[
           styles.General.fullScreen,
           styles.General.largePadding,
-          styles.General.darkPurpleBackground,
+          styles.General.lightYellowBackground,
           styles.General.paddingBottom,
           styles.General.justifyContentCenter,
         ]}>
         {data != undefined ? (
           <TeamDetails item={data} index={index} />
         ) : (
-          <ActivityIndicator size="large" color={Colors.BLACK} />
+          <Loader />
         )}
       </View>
     </>

@@ -7,22 +7,18 @@ export default StyleSheet.create({
     height: '100%',
   },
 
-  gutterEnd: {
-    paddingEnd: 4,
-  },
-
   lightGrayBackground: {
     backgroundColor: Colors.BEIGE,
   },
 
-  purpleBackground: {
+  greenBackground: {
     backgroundColor: Colors.GREEN,
   },
 
   transparentBackground: {
     backgroundColor: 'transparent',
   },
-  darkPurpleBackground: {
+  lightYellowBackground: {
     backgroundColor: Colors.LIGHT_YELLOW,
   },
 

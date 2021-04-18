@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import UsersNavigator from './UsersNavigator';
+import UsersNavigator from 'LigaDataTask/src/navigations/UsersNavigator';
 import {useSelector} from 'react-redux';
-import SplashScreenNavigator from './SplashScreenNavigator';
+import SplashScreenNavigator from 'LigaDataTask/src/navigations/SplashScreenNavigator';
 
 const AppNavigator = () => {
   const Stack = createStackNavigator();

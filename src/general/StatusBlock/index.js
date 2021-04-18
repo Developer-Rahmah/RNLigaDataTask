@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, ActivityIndicator} from 'react-native';
 import style from 'LigaDataTask/assets/styles';
-import colors from 'LigaDataTask/assets/styles/Colors';
 import Container from 'LigaDataTask/src/general/Container/index';
+import Loader from 'LigaDataTask/src/general/Loader';
 
 const StatusBlock = ({loading, children, noIndicator}) => {
   // Sometimes, 'loading' prop can be an array of booleans, we handle them, and only render the children
@@ -17,7 +16,7 @@ const StatusBlock = ({loading, children, noIndicator}) => {
   if (isLoadingArray || isLoadingBoolean) {
     return noIndicator ? null : (
       <Container style={[style.General.fullScreen]}>
-        <ActivityIndicator color={colors.BLACK} size="large" />
+        <Loader />
       </Container>
     );
   } else {

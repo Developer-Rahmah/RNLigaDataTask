@@ -1,10 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
 export default StyleSheet.create({
-  logo: {
-    width: Dimensions.get('window').width / 2,
-    height: Dimensions.get('window').width / 2,
-    resizeMode: 'contain',
-  },
   teaserImage: {
     width: '100%',
     height: Dimensions.get('window').width / 2,

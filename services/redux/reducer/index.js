@@ -1,5 +1,5 @@
 const DEFAULT_STATE = {
-  showGifImage: "yes",
+  showGifImage: 'yes',
 };
 
 const applicationReducer = (state = DEFAULT_STATE, action) => {

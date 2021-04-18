@@ -5,7 +5,7 @@ import {ScrollView, View} from 'react-native';
 import {GET} from 'LigaDataTask/services/config/api';
 import {useGet} from 'LigaDataTask/services/hooks';
 import StatusBlock from 'LigaDataTask/src/general/StatusBlock';
-import GameCard from './displays/GameCard';
+import GameCard from 'LigaDataTask/src/screens/games/displays/GameCard';
 import MultiSelect from 'react-native-multiple-select';
 import {seasons} from 'LigaDataTask/services/helper';
 import {tahomaFont} from 'LigaDataTask/assets/styles/Fonts';
@@ -43,13 +43,13 @@ const index = ({navigation: {}}) => {
           <ScrollView style={styles.General.horizontalPadding}>
             <MultiSelect
               styleMainWrapper={styles.General.shadow}
-              styleListContainer={styles.General.darkPurpleBackground}
+              styleListContainer={styles.General.lightYellowBackground}
               styleDropdownMenuSubsection={[
                 styles.General.transparentBackground,
                 styles.General.shadow,
-                styles.Elements.dropDownMenuBorder
+                styles.Elements.dropDownMenuBorder,
               ]}
-              searchInputStyle={{margin: 20}}
+              searchInputStyle={styles.Layout.margin}
               search
               hideDropdown
               hideTags

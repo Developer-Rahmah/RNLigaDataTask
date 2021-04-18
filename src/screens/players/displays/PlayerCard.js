@@ -8,7 +8,6 @@ import {useNavigation} from '@react-navigation/native';
 import TeaserImage from 'LigaDataTask/src/images/TeaserImage';
 import Player from 'LigaDataTask/assets/icons/player.png';
 
-
 const PlayerCard = ({item}) => {
   const navigation = useNavigation();
 
@@ -20,7 +19,7 @@ const PlayerCard = ({item}) => {
           radius
           style={[
             styles.General.shadow,
-            styles.General.purpleBackground,
+            styles.General.greenBackground,
             styles.General.alignItemsCenter,
             styles.General.horizontalPadding,
             styles.Layout.flexDirectionRow,

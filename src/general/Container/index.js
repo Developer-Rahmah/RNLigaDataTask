@@ -13,7 +13,7 @@ const Container = ({
       style={[
         styles.General.fullScreen,
         styles.General.largePadding,
-        styles.General.darkPurpleBackground,
+        styles.General.lightYellowBackground,
         styles.General.paddingBottom,
         styles.General.justifyContentCenter,
       ]}

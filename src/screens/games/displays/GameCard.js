@@ -20,9 +20,14 @@ const GameCard = ({item}) => {
           styles.General.smallVerticalPadding,
         ]}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('GameDetails', {item: item,cover:selectedPhoto})}
+          onPress={() =>
+            navigation.navigate('GameDetails', {
+              item: item,
+              cover: selectedPhoto,
+            })
+          }
           radius
-          style={[styles.General.purpleBackground, styles.Layout.flexCenter]}>
+          style={[styles.General.greenBackground, styles.Layout.flexCenter]}>
           <TeaserImage source={selectedPhoto} color={Colors.LIGHT_GREEN} />
           <View style={styles.General.mediumVerticalPadding}>
             <Title

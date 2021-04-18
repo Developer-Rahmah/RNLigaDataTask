@@ -17,11 +17,9 @@ export const buildUrl = (uri, query = {}, params = []) => {
     queryString = `${queryString}&${key}=${query[key]}`;
   });
   const t = `${uri}${paramString}${queryString}`;
+  console.log('urrrlrlrllrlrlr', uri);
   return `${uri}${paramString}${queryString}`;
 };
-
-export const roundNumber = number =>
-  Math.round((number + Number.EPSILON) * 10) / 10;
 
 /**
  *

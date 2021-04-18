@@ -2,8 +2,8 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeStack from 'LigaDataTask/src/navigations/HomeStack';
 import BottomTab from 'LigaDataTask/src/layout/BottomTab';
-import PlayersStack from './PlayersStack';
-import GamesStack from './GamesStack';
+import PlayersStack from 'LigaDataTask/src/navigations/PlayersStack';
+import GamesStack from 'LigaDataTask/src/navigations/GamesStack';
 
 const Tab = createBottomTabNavigator();
 

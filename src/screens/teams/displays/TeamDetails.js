@@ -9,7 +9,7 @@ import FootballTeams from 'LigaDataTask/assets/images/football_teams.png';
 const TeamDetails = ({item, itemCover}) => {
   return (
     <>
-      <ScrollView style={[styles.General.darkPurpleBackground]}>
+      <ScrollView style={[styles.General.lightYellowBackground]}>
         <DetailsImage source={FootballTeams} />
         <View
           style={[

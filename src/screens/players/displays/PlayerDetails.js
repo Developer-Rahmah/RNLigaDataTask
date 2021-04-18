@@ -1,17 +1,17 @@
 import React from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import {View} from 'react-native';
 import styles from 'LigaDataTask/assets/styles';
-import Colors from 'LigaDataTask/assets/styles/Colors';
 import DetailsImage from 'LigaDataTask/src/images/DetailsImage';
 import Details from 'LigaDataTask/src/general/Details';
 import {ScrollView} from 'react-native-gesture-handler';
 import FootballPlayer from 'LigaDataTask/assets/images/football_player.png';
 import {Container} from 'native-base';
+import Loader from 'LigaDataTask/src/general/Loader';
 
 const PlayerDetails = ({item}) => {
   return (
     <>
-      <ScrollView style={[styles.General.darkPurpleBackground]}>
+      <ScrollView style={[styles.General.lightYellowBackground]}>
         {item.team != undefined ? (
           <>
             <DetailsImage source={FootballPlayer} />
@@ -32,7 +32,7 @@ const PlayerDetails = ({item}) => {
               styles.General.transparentBackground,
               styles.Layout.flexCenter,
             ]}>
-            <ActivityIndicator size="large" color={Colors.BLACK} />
+            <Loader />
           </Container>
         )}
       </ScrollView>

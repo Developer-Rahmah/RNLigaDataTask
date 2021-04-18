@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import {View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import styles from 'LigaDataTask/assets/styles';
 import Details from 'LigaDataTask/src/general/Details';
@@ -8,11 +8,12 @@ import Title from 'LigaDataTask/src/elements/Title';
 import Card from 'LigaDataTask/src/general/Card';
 import Colors from 'LigaDataTask/assets/styles/Colors';
 import Container from 'LigaDataTask/src/general/Container';
+import Loader from 'LigaDataTask/src/general/Loader';
 
 const GameDetails = ({item, cover}) => {
   return (
     <>
-      <ScrollView style={[styles.General.darkPurpleBackground]}>
+      <ScrollView style={[styles.General.lightYellowBackground]}>
         {item.home_team != undefined ? (
           <>
             <DetailsImage source={cover} />
@@ -64,7 +65,7 @@ const GameDetails = ({item, cover}) => {
               styles.General.transparentBackground,
               styles.Layout.flexCenter,
             ]}>
-            <ActivityIndicator size="large" color={Colors.BLACK} />
+            <Loader />
           </Container>
         )}
       </ScrollView>

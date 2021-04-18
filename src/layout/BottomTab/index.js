@@ -1,7 +1,7 @@
 import styles from 'LigaDataTask/assets/styles';
 import React from 'react';
 import {View} from 'react-native';
-import BottomTabButton from './BottomTabButton';
+import BottomTabButton from 'LigaDataTask/src/layout/BottomTab/BottomTabButton';
 
 const BottomTab = ({state, descriptors, navigation}) => {
   const focusedOptions = descriptors[state.routes[state.index].key].options;

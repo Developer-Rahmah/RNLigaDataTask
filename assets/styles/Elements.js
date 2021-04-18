@@ -32,14 +32,6 @@ export default StyleSheet.create({
     textAlign: I18nManager.isRTL ? 'right' : 'left',
   },
 
-  primaryButton: {
-    backgroundColor: Colors.GREEN,
-    padding: 7,
-    borderRadius: 7,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
   bottomTabContainer: {
     bottom: 0,
     flexDirection: 'row',
@@ -71,9 +63,7 @@ export default StyleSheet.create({
   playerName: {
     width: '68%',
   },
-  searchListingBottomPadding: {
-    paddingBottom: Dimensions.get('window').height / 4,
-  },
+
   headerTopPaddingIphoneXCase: {
     paddingTop: Dimensions.get('window').height / 20,
   },
