@@ -1,13 +1,12 @@
 import styles from 'LigaDataTask/assets/styles';
-import { setShowGifImageAction } from 'LigaDataTask/services/redux/actions';
+import {setShowGifImageAction} from 'LigaDataTask/services/redux/actions';
 import React, {useState} from 'react';
 import FastImage from 'react-native-fast-image';
-import { useDispatch } from 'react-redux';
-
+import {useDispatch} from 'react-redux';
 
 const index = () => {
   const dispatch = useDispatch();
-  
+
   return (
     <>
       <FastImage
