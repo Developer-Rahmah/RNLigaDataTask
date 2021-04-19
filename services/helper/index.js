@@ -17,7 +17,6 @@ export const buildUrl = (uri, query = {}, params = []) => {
     queryString = `${queryString}&${key}=${query[key]}`;
   });
   const t = `${uri}${paramString}${queryString}`;
-  console.log('urrrlrlrllrlrlr', uri);
   return `${uri}${paramString}${queryString}`;
 };
 
